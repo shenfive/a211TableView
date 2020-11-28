@@ -25,10 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let userDefault = UserDefaults.standard
         phoneList.removeAll()
         phoneList = (userDefault.value(forKey: "phoneList") as? [Dictionary<String,String>]) ?? []
-        print(phoneList.count)
         theTableView.reloadData()
-        
-        
     }
     
     
@@ -43,13 +40,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
-        cell.backgroundColor = UIColor.red
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! MyTableViewCell
         
-        let name = phoneList[indexPath.row]["name"]
-        print("name:\(name)")
+        let name = phoneList[indexPath.row]["name"] ?? ""
+        let phone = phoneList[indexPath.row]["phone"] ?? ""
         
-        cell.textLabel?.text = "\(phoneList[indexPath.row]["name"]!):\(phoneList[indexPath.row]["phone"]!)"
+        cell.nameLb.text = name
+        cell.phoneLb.text = phone
+   
+        
         return cell
     }
     

@@ -14,6 +14,7 @@
 		3B50F0FB2571FE550038E3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B50F0FA2571FE550038E3A5 /* Assets.xcassets */; };
 		3B50F0FE2571FE550038E3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B50F0FC2571FE550038E3A5 /* LaunchScreen.storyboard */; };
 		3B918A5D25721C640064C299 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B918A5C25721C640064C299 /* InputViewController.swift */; };
+		3B918A6025722DBC0064C299 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B918A5F25722DBC0064C299 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3B50F0FD2571FE550038E3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B50F0FF2571FE550038E3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B918A5C25721C640064C299 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		3B918A5F25722DBC0064C299 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3B50F0FC2571FE550038E3A5 /* LaunchScreen.storyboard */,
 				3B50F0FF2571FE550038E3A5 /* Info.plist */,
 				3B918A5C25721C640064C299 /* InputViewController.swift */,
+				3B918A5F25722DBC0064C299 /* MyTableViewCell.swift */,
 			);
 			path = a211TableView;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				3B50F0F62571FE520038E3A5 /* ViewController.swift in Sources */,
 				3B50F0F22571FE520038E3A5 /* AppDelegate.swift in Sources */,
 				3B50F0F42571FE520038E3A5 /* SceneDelegate.swift in Sources */,
+				3B918A6025722DBC0064C299 /* MyTableViewCell.swift in Sources */,
 				3B918A5D25721C640064C299 /* InputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
