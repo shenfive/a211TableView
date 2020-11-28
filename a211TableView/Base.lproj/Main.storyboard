@@ -40,7 +40,7 @@
                             <constraint firstItem="kr3-xN-EGe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wgj-HW-61Y"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="電話" image="folder" catalog="system" id="luS-mz-Xr2"/>
+                    <tabBarItem key="tabBarItem" title="電話" image="folder" catalog="system" selectedImage="folder.fill" id="luS-mz-Xr2"/>
                     <connections>
                         <outlet property="theTableView" destination="kr3-xN-EGe" id="uDO-k4-b0e"/>
                     </connections>
@@ -52,18 +52,64 @@
         <!--輸入-->
         <scene sceneID="chl-wf-L6t">
             <objects>
-                <viewController id="T5t-eB-mgg" sceneMemberID="viewController">
+                <viewController id="T5t-eB-mgg" customClass="InputViewController" customModule="a211TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKQ-5P-3WK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  請輸入電話" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0jc-dN-htA">
+                                <rect key="frame" x="50" y="148" width="314" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="LHd-WY-BzH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fh-IA-C0O">
+                                <rect key="frame" x="304" y="212" width="60" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9xl-Wt-pKJ"/>
+                                    <constraint firstAttribute="width" constant="60" id="dwc-C6-3Xp"/>
+                                </constraints>
+                                <state key="normal" title="儲存"/>
+                                <connections>
+                                    <action selector="newPhoneAction:" destination="T5t-eB-mgg" eventType="touchUpInside" id="zAE-JM-Foi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  請輸入姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwi-4C-Sf0">
+                                <rect key="frame" x="50" y="94" width="314" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Imh-1M-Hq4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rIp-wd-fxg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="0jc-dN-htA" firstAttribute="top" secondItem="kwi-4C-Sf0" secondAttribute="bottom" constant="20" id="QaJ-eH-fWl"/>
+                            <constraint firstItem="0jc-dN-htA" firstAttribute="leading" secondItem="rIp-wd-fxg" secondAttribute="leading" constant="50" id="T5Z-gY-9tO"/>
+                            <constraint firstItem="rIp-wd-fxg" firstAttribute="trailing" secondItem="kwi-4C-Sf0" secondAttribute="trailing" constant="50" id="UOb-eU-Y5O"/>
+                            <constraint firstItem="kwi-4C-Sf0" firstAttribute="leading" secondItem="rIp-wd-fxg" secondAttribute="leading" constant="50" id="e2q-Dy-aKn"/>
+                            <constraint firstItem="kwi-4C-Sf0" firstAttribute="top" secondItem="rIp-wd-fxg" secondAttribute="top" constant="50" id="nG4-vl-fWn"/>
+                            <constraint firstItem="rIp-wd-fxg" firstAttribute="trailing" secondItem="0jc-dN-htA" secondAttribute="trailing" constant="50" id="nUc-zq-cKe"/>
+                            <constraint firstItem="2Fh-IA-C0O" firstAttribute="trailing" secondItem="0jc-dN-htA" secondAttribute="trailing" id="p71-d5-zeg"/>
+                            <constraint firstItem="2Fh-IA-C0O" firstAttribute="top" secondItem="0jc-dN-htA" secondAttribute="bottom" constant="30" id="wVh-JM-Gxh"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="輸入" selectedImage="pencil" catalog="system" id="SA9-2i-V1h"/>
+                    <tabBarItem key="tabBarItem" title="輸入" image="pencil" catalog="system" selectedImage="square.and.arrow.up.on.square" id="SA9-2i-V1h"/>
+                    <connections>
+                        <outlet property="nameTF" destination="kwi-4C-Sf0" id="8Zl-KY-LMe"/>
+                        <outlet property="phoneTF" destination="0jc-dN-htA" id="au3-ni-TcR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gE-mh-h6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397" y="827"/>
+            <point key="canvasLocation" x="-397.10144927536237" y="826.33928571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HSW-cj-xS0">
@@ -71,11 +117,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Nfv-VM-tR6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lWV-B9-MAB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="T5t-eB-mgg" kind="relationship" relationship="viewControllers" id="Nuz-1i-jpF"/>
+                        <segue destination="T5t-eB-mgg" kind="relationship" relationship="viewControllers" id="g0c-Vh-PqZ"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="i2M-j4-eWd"/>
                     </connections>
                 </tabBarController>
@@ -86,9 +133,14 @@
     </scenes>
     <resources>
         <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up.on.square" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
