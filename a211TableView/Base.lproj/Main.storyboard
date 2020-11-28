@@ -101,7 +101,7 @@
                             <constraint firstItem="2Fh-IA-C0O" firstAttribute="top" secondItem="0jc-dN-htA" secondAttribute="bottom" constant="30" id="wVh-JM-Gxh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="輸入" image="pencil" catalog="system" selectedImage="square.and.arrow.up.on.square" id="SA9-2i-V1h"/>
+                    <tabBarItem key="tabBarItem" title="輸入" image="pencil" catalog="system" selectedImage="pencil.circle" id="SA9-2i-V1h"/>
                     <connections>
                         <outlet property="nameTF" destination="kwi-4C-Sf0" id="8Zl-KY-LMe"/>
                         <outlet property="phoneTF" destination="0jc-dN-htA" id="au3-ni-TcR"/>
@@ -135,7 +135,7 @@
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up.on.square" catalog="system" width="117" height="128"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

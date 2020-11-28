@@ -15,6 +15,13 @@ class InputViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    
     @IBAction func newPhoneAction(_ sender: Any) {
 //        guard let name = nameTF.text else {
 //            return
@@ -31,7 +38,7 @@ class InputViewController: UIViewController {
             return
         }
         
-        //檢查名子
+        //檢查電話☎️
         if phoen.count < 8 {
             let alert = UIAlertController(title: "", message: "請輸入八碼以上的電話", preferredStyle: .alert)
             let okBut = UIAlertAction(title: "OK", style: .default, handler: nil)
