@@ -58,8 +58,7 @@ class InputViewController: UIViewController {
         userDefault.setValue(phoneList, forKey: "phoneList")
         userDefault.synchronize()
         
-        let test = (userDefault.value(forKey: "phoneList") as? [Dictionary<String,String>]) ?? []
-        print(test.count)
+        
         
         
         
