@@ -31,7 +31,14 @@ class InputViewController: UIViewController {
             return
         }
         
-        
+        //檢查名子
+        if phoen.count < 8 {
+            let alert = UIAlertController(title: "", message: "請輸入八碼以上的電話", preferredStyle: .alert)
+            let okBut = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okBut)
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
         
     }
