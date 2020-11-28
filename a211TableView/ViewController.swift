@@ -20,15 +20,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     //MARK:TableView DataSource & Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 8000
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+//        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
         cell.backgroundColor = UIColor.red
         cell.textLabel?.text = "\(indexPath.row)"
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 72
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
