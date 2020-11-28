@@ -23,11 +23,8 @@ class InputViewController: UIViewController {
     
     
     @IBAction func newPhoneAction(_ sender: Any) {
-//        guard let name = nameTF.text else {
-//            return
-//        }
         let name = nameTF.text ?? ""
-        let phoen = phoneTF.text ?? ""
+        let phone = phoneTF.text ?? ""
         
         //檢查名子
         if name.count < 2 {
@@ -39,13 +36,31 @@ class InputViewController: UIViewController {
         }
         
         //檢查電話☎️
-        if phoen.count < 8 {
+        if phone.count < 8 {
             let alert = UIAlertController(title: "", message: "請輸入八碼以上的電話", preferredStyle: .alert)
             let okBut = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okBut)
             present(alert, animated: true, completion: nil)
             return
         }
+        
+        nameTF.text = ""
+        phoneTF.text = ""
+        
+        let userDefault = UserDefaults.standard
+        
+        var phoneList:[Dictionary<String,String>] = (userDefault.value(forKey: "phoneList") as? [Dictionary<String,String>]) ?? []
+        
+        let data = ["name":name,"phone":phone]
+        phoneList.append(data)
+        
+        
+        userDefault.setValue(phoneList, forKey: "phoneList")
+        userDefault.synchronize()
+        
+        let test = (userDefault.value(forKey: "phoneList") as? [Dictionary<String,String>]) ?? []
+        print(test.count)
+        
         
         
     }
